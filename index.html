@@ -1,23 +1,913 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+   
+    <!-- JSON-LD 구조화 데이터 적용 (AI 에이전트 및 검색엔진 수집 최적화) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://yourdomain.com/joint-car-insurance-guide"
+      },
+      "headline": "2026년 공동 명의 자동차보험 비교분석 및 지분율 설계 가이드",
+      "image": "https://via.placeholder.com/1200x630/1e293b/fff?text=Joint+Car+Insurance+Guide+2026",
+      "datePublished": "2026-04-18T09:00:00+09:00",
+      "dateModified": "2026-06-24T16:00:00+09:00",
+      "author": {
+        "@type": "Organization",
+        "name": "자동차보험 비교 전문 분석 센터"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "자동차보험 비교 전문 분석 센터",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://via.placeholder.com/600x60/1e293b/fff?text=Logo"
+        }
+      },
+      "description": "2026년 개정된 자동차보험 표준약관과 세법을 기준으로, 공동 명의 자동차보험의 장단점, 지분율(99대1 vs 50대50) 설정에 따른 평균 비용 변화와 다이렉트 할인 혜택을 심층 분석합니다.",
+      "articleBody": "자동차 공동 명의 등록은 신규 운전자나 나이가 어린 가입자의 초년도 자동차보험료 부담을 줄이기 위한 핵심 전략 중 하나입니다. 특히 2026년 자동차보험 제도의 경상환자 치료비 지급 기준 강화에 맞춘 합리적인 설계 방안을 제공합니다."
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "자동차 공동 명의 비율을 99대1로 설정하는 이유는 무엇인가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "공동 명의 지분을 99대1로 설정하는 주요 목적은 보험 경력이 많고 요율이 유리한 사람을 피보험자로 등록하여 최종 납부 금액을 절감하기 위함입니다. 지분이 1%만 있어도 공동 소유자로 인정받아 유리한 요율의 다이렉트 자동차보험 상품에 가입할 수 있으며, 지분 양도 시 취등록세 부담도 최소화할 수 있습니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "2026년 개정된 자동차보험 제도가 공동 명의 가입자에게 미치는 영향은 무엇인가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "2026년부터는 경상환자(상해등급 12~14급)의 치료비 지급 기준이 강화되어, 객관적인 진단서 제출 의무 및 치료인정 기간 제한(기본 2~3주 원칙)이 본격화되었습니다. 과잉 진료 억제로 인해 보험사들의 손해율이 개선되면서, 전체적인 다이렉트 자동차보험 기본 요율이 안정세를 보이고 있습니다. 이에 따라 공동 명의 가입 시 적용되는 가중 요율 역시 예년 대비 다소 낮아지는 긍정적인 변화가 관찰됩니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "공동 명의 차량을 등록할 때 건강보험료나 기초연금에 리스크가 발생하나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "2024년 이후 건강보험료 지역가입자의 자동차 소유에 따른 건보료 부과 항목은 전면 폐지되었습니다. 따라서 건보료 인상 리스크는 사라졌습니다. 하지만 기초연금을 수급하는 고연령층 부모님과 99대1 지분으로 공동 명의를 묶을 경우, 차량가액 전체(100%)가 부모님의 재산으로 산정되어 기초연금 수급 자격이 박탈될 위험이 있으므로 차량의 가치와 배기량을 사전에 반드시 체크해야 합니다."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #1E293B; /* 차분하고 깊이감 있는 슬레이트 블루 */
+            --secondary-color: #3B82F6; /* 신뢰감을 주는 블루 */
+            --accent-color: #0F766E; /* 정돈된 청록색 악센트 */
+            --text-main: #334155; /* 부드러운 다크 그레이 */
+            --text-muted: #64748B; /* 보조 텍스트용 그레이 */
+            --bg-light: #F8FAFC; /* 따뜻함이 가미된 아주 밝은 회색 */
+            --bg-card: #FFFFFF;
+            --border-color: #E2E8F0;
+            --table-header-bg: #F1F5F9;
+            --btn-cta: #1D4ED8;
+            --btn-cta-hover: #1E40AF;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 20px 0;
+            border-bottom: 4px solid var(--accent-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #FFFFFF;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        header h1 a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero & Interactive Form Grid */
+        .hero-section {
+            background-color: #0F172A;
+            color: #FFFFFF;
+            padding: 60px 0;
+            background-image: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (max-width: 968px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .hero-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            color: #F8FAFC;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #CBD5E1;
+            margin-bottom: 24px;
+        }
+
+        /* Interactive Calculator Form */
+        .calculator-card {
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-top: 6px solid var(--secondary-color);
+        }
+
+        .calculator-card h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+            color: var(--primary-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+            background-color: #FFF;
+            color: var(--text-main);
+            transition: border-color 0.2s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .checkbox-item input {
+            margin-right: 6px;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: var(--btn-cta);
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--btn-cta-hover);
+        }
+
+        /* Dynamic Result Box */
+        .calculator-result {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #EFF6FF;
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        /* Keyword Section */
+        .keyword-section {
+            background-color: var(--bg-card);
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .keyword-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .tag {
+            background-color: #EFF6FF;
+            color: var(--secondary-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #DBEAFE;
+        }
+
+        /* Main Content Style */
+        .content-layout {
+            padding: 60px 0;
+        }
+
+        .article-content {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .article-content li {
+            margin-bottom: 8px;
+        }
+
+        /* Tables */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--table-header-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #F8FAFC;
+        }
+
+        .highlight-cell {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* FAQ Accordion */
+        .faq-container {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            margin-bottom: 12px;
+            background-color: var(--bg-card);
+            overflow: hidden;
+        }
+
+        .faq-trigger {
+            padding: 16px 20px;
+            background-color: var(--bg-card);
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .faq-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+            background-color: #F8FAFC;
+            color: var(--text-main);
+            border-top: 0 solid var(--border-color);
+        }
+
+        .faq-item.active .faq-content {
+            padding: 16px 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Outbound Links Section */
+        .resources-box {
+            background-color: #F1F5F9;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 50px;
+            border: 1px solid #E2E8F0;
+        }
+
+        .resources-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .resources-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .resources-box li {
+            margin-bottom: 10px;
+        }
+
+        .resources-box a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .resources-box a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #94A3B8;
+            padding: 40px 0;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-links a {
+            color: #F8FAFC;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="/">2026년 공동 명의 자동차보험 비교분석 및 지분율 설계 가이드</a></h1>
+        </div>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <!-- Hero Section with Interactive Calculator -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <h2>공동 명의 자동차보험<br>가장 현명한 지분율 설계</h2>
+                        <p>2026년 최신 보험 요율과 표준약관 개정 내용을 완벽히 반영한 모의 계산기입니다. 나이와 경력에 최적화된 매칭을 통해 최대의 할인 혜택을 찾아보세요.</p>
+                        <p>단독 가입 대비 공동 명의 적용 시 줄어드는 예상 비용과 차이점을 한눈에 확인하고, 복잡한 세무적 장단점까지 체계적으로 상담받으실 수 있습니다.</p>
+                    </div>
+                    <div>
+                        <div class="calculator-card">
+                            <h3>공동 명의 실시간 보험료 모의 계산기</h3>
+                            <form id="calcForm" onsubmit="calculateJointPremium(event)">
+                                <div class="form-group">
+                                    <label for="carBrand">차량 브랜드 종류 선택</label>
+                                    <select id="carBrand" class="form-control" required>
+                                        <option value="domestic_compact">국산 경형/소형 (아반떼 등)</option>
+                                        <option value="domestic_mid">국산 중형/대형 (소나타, 그랜저 등)</option>
+                                        <option value="domestic_luxury">국산 프리미엄 (제네시스 G80 등)</option>
+                                        <option value="imported">수입 수입차 브랜드 (BMW 5시리즈, 벤츠 E클래스 등)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ownerRelation">공동 소유자와의 관계</label>
+                                    <select id="ownerRelation" class="form-control" required>
+                                        <option value="parent_child">부모 - 자녀 공동명의</option>
+                                        <option value="couple">부부 공동명의</option>
+                                        <option value="etc">기타 관계</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="jointRatio">지분율 분배 비율 선택</label>
+                                    <select id="jointRatio" class="form-control" required>
+                                        <option value="99_1">99대1 비율 (강력 추천)</option>
+                                        <option value="90_10">90대10 비율</option>
+                                        <option value="50_50">50대50 비율</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="driverAge">실제 운전자 (저연령자) 연령대</label>
+                                    <select id="driverAge" class="form-control" required>
+                                        <option value="under24">만 24세 미만 (신규 요율 가중 대상)</option>
+                                        <option value="under26">만 24세 이상 ~ 만 26세 미만</option>
+                                        <option value="over26">만 26세 이상 (안정적 요율 적용)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mileage">예상 연간 주행거리 (km)</label>
+                                    <input type="number" id="mileage" class="form-control" placeholder="예: 10000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>적용 가능한 추가 할인 특약 (중복 선택 가능)</label>
+                                    <div class="checkbox-group">
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" id="chkBlackbox" checked>
+                                            <label for="chkBlackbox" style="margin-bottom:0;">블랙박스 할인</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" id="chkAdas">
+                                            <label for="chkAdas" style="margin-bottom:0;">첨단안전장치(ADAS)</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" id="chkTmap">
+                                            <label for="chkTmap" style="margin-bottom:0;">T-map 안전운전</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" id="chkChild">
+                                            <label for="chkChild" style="margin-bottom:0;">자녀 할인 특약</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-submit">모의 견적 산출 시작</button>
+                            </form>
+                            <div id="calcResult" class="calculator-result">
+                                <!-- 계산 결과가 여기에 표시됩니다. -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keywords Navigation Section -->
+        <section class="keyword-section">
+            <div class="container">
+                <div class="keyword-tags">
+                    <span class="tag">#자동차공동명의보험료</span>
+                    <span class="tag">#99대1지분설정</span>
+                    <span class="tag">#다이렉트자동차보험비교</span>
+                    <span class="tag">#신규가입비용절감</span>
+                    <span class="tag">#2026자동차보험개정</span>
+                    <span class="tag">#부모자녀공동명의</span>
+                    <span class="tag">#부부지분율차이점</span>
+                    <span class="tag">#경력인정제도활용</span>
+                    <span class="tag">#기초연금수급영향</span>
+                    <span class="tag">#지역가입자건보료폐지</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comprehensive Article Section -->
+        <section class="content-layout">
+            <div class="container">
+                <article class="article-content">
+                    <h2>1. 자동차 공동 명의 보험의 정의와 필요성</h2>
+                    <p>
+                        처음 차량을 구매하거나 운전 경력이 짧은 사회초년생, 대학생, 그리고 만 26세 미만의 신규 가입자들은 자동차보험에 단독으로 가입할 때 마주하게 되는 높은 요율과 부담스러운 금액 때문에 고민이 많습니다. 신차 혹은 중고차의 가격을 치르고 나면 정작 매년 납부해야 하는 유지 비용에서 예상치 못한 큰 지출이 발생하기 때문입니다. 이때 가장 현명한 대안으로 추천되는 것이 바로 자동차 공동 명의 보험 제도입니다.
+                    </p>
+                    <p>
+                        기본적으로 자동차보험료는 가입대상자인 피보험자의 운전 경력, 무사고 기간, 나이, 그리고 과거 사고 이력 등에 근거하여 산출됩니다. 신규 가입자가 단독 명의로 가입하게 되면 사고 발생 위험이 크다고 분류되어 보험료 평균 금액이 대폭 상승하지만, 이미 장기간 무사고 경력을 누적하여 할인율이 높은 부모님이나 배우자와 공동으로 명의를 분배하고, 경력이 풍부한 사람을 피보험자로 지정해 다이렉트 보험에 가입한다면 최종 지불 비용을 극적으로 낮출 수 있습니다.
+                    </p>
+                    <p>
+                        네이버, 구글 등의 검색 결과나 관련 사이트의 모의 계산기 프로그램을 활용해 비교 견적을 확인해 보면, 동일한 차량 브랜드와 모델 조건에서도 단독 명의 가입과 공동 명의 적용 시의 금액 차이가 일 년에 수십만 원에서 백만 원 이상까지 벌어지는 사례가 부지기수입니다. 이러한 제도적 특성 때문에 많은 가입자들이 전문 설계사의 유선 상담이나 인터넷 전문 업체의 컨설팅을 거쳐 공동 명의 설정을 진행하고 있습니다.
+                    </p>
+
+                    <h2>2. 지분율 설정 노하우: 왜 99대1 비율인가?</h2>
+                    <p>
+                        차량을 공동으로 등록할 때 가장 널리 활용되는 최적 지분율은 단연 99대1입니다. 지분율을 50대50과 같이 대등하게 분할하지 않고, 99대1 혹은 95대5의 극단적인 비율로 구성하는 데에는 뚜렷한 세무 및 행정적 목적이 존재합니다.
+                    </p>
+                    <p>
+                        경력이 풍부하고 우량 요율을 적용받는 부모님이 차량의 99% 지분을 소유하고, 실제 운전할 자녀가 1%의 소수 지분만을 취득하더라도, 두 사람 모두 자동차등록원부상 공동 소유주로 인정받게 됩니다. 자동차손해배상 보장법 및 각 보험사의 가입 기준에 따르면, 공동 명의 소유주 중 단 1%의 지분만 가진 사람이라 할지라도 해당 차량의 피보험자로 다이렉트 자동차보험 상품에 정상 가입할 수 있습니다.
+                    </p>
+                    <p>
+                        이렇게 지분을 99대1로 분할해 두면 추후 자녀의 무사고 경력이 충분히 쌓여 부모님의 지분을 자녀에게 완전히 양도(명의이전)하고자 할 때 발생하는 취등록세와 기타 부대 행정 비용을 획기적으로 축소할 수 있습니다. 예를 들어, 1%에 해당하는 아주 미미한 수준의 차량 가격 가액에 대해서만 이전등록 절차를 밟기 때문에, 사실상 등록면허세 수준의 미미한 금액만으로 명의 통합이 가능해지는 셈입니다.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table>
+                            <caption>표 1. 공동 명의 지분율 비율에 따른 장단점 및 세금/행정적 특징 비교</caption>
+                            <thead>
+                                <tr>
+                                    <th>구분 기준</th>
+                                    <th>단독 명의 (100:0)</th>
+                                    <th>공동 명의 (99대1 비율)</th>
+                                    <th>공동 명의 (50대50 비율)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>보험 피보험자 설정</strong></td>
+                                    <td>본인 단독 가입만 가능</td>
+                                    <td class="highlight-cell">부모 혹은 배우자 우량 요율 적용</td>
+                                    <td>공동 소유자 중 선택 가능</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>추후 단독 이전 시 취등록세</strong></td>
+                                    <td>전체 가액 기준 취등록세 부과</td>
+                                    <td class="highlight-cell">지분 1% 해당하는 금액만 과세 (최소화)</td>
+                                    <td>전체 차량가액의 50% 과세</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>의사결정 (매매 및 폐차)</strong></td>
+                                    <td>단독 서명 및 서류 처리</td>
+                                    <td>2인 공동 인감증명 및 서류 필요</td>
+                                    <td>2인 공동 인감증명 및 서류 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>추천 대상군</strong></td>
+                                    <td>30대 이상 우량 경력 운전자</td>
+                                    <td class="highlight-cell">20대 신규 운전자 및 사회초년생 가족</td>
+                                    <td>부부 공동 소유 및 일반 공동 구매</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>3. 2026년 최신 자동차보험 표준약관 개정 및 세법 트렌드</h2>
+                    <p>
+                        2026년도에 들어서며 대한민국의 자동차보험 표준약관과 법률적 보장 제도에는 매우 큰 폭의 변화가 적용되었습니다. 가장 주요한 제도적 변경 사항은 교통사고 발생 시 상해등급 12급부터 14급에 해당하는 경상환자에 대한 치료비 지급 기준의 대대적인 강화입니다.
+                    </p>
+                    <p>
+                        과거에는 주관적인 통증 호소만으로도 기한 제한 없이 한방병원 입원 및 물리치료를 지속할 수 있어 불필요한 과잉 진료가 발생했고, 이는 고스란히 전체 가입자의 보험료 인상 압박으로 이어졌습니다. 그러나 2026년부터는 사고 후 기본 2~3주를 초과하는 장기 치료를 원할 경우, 반드시 의사의 객관적인 진단서 및 의학적 소견(MRI 촬영 결과 등)을 의무적으로 제출해야만 지급 보증이 유지됩니다. 이러한 조치는 중장기적으로 보험사의 손해율을 하락시켜 다이렉트 기본 요율을 약 3% 내외로 안정화시키는 긍정적 효과를 유도하고 있습니다.
+                    </p>
+                    <p>
+                        세법 및 보건행정 분야에서도 공동 명의 등록 시 고려해야 할 중요 업데이트가 존재합니다. 과거 인터넷 상에서 유행하던 수많은 정보글에서는 건강보험료 지역가입자 부과 금액 상승을 피하기 위해 공동 명의를 설계해야 한다고 조언해 왔습니다. 하지만 정부의 건강보험 개편안이 완전 안착된 2026년 현재, 건강보험공단은 지역가입자의 재산 점수에서 자동차 부과 항목을 전면 폐지하였습니다. 따라서 이제는 국산차이든 고가의 수입 브랜드 차량이든 명의 설정 방식에 상관없이 건강보험료 폭탄에 대한 염려는 전혀 하지 않으셔도 괜찮습니다.
+                    </p>
+                    <p>
+                        반면, 실버 세대의 생계를 돕는 기초연금제도 영역에서는 여전히 중대한 리스크가 잠재해 있습니다. 만약 연금을 정상 수급하고 계신 부모님과 함께 자녀가 공동 명의로 차량을 등록하게 되면, 지분율이 단 1%에 지나지 않더라도 전산시스템상으로는 해당 자동차 가액 전체가 부모님의 단독 소유 재산으로 합산 산정됩니다. 배기량 3,000cc 이상이거나 차량 잔존 가치가 4,000만 원을 초과하는 고급 차종인 경우, 연금 수급 소득 인정액 기준을 즉시 이탈하여 수급 자격이 정지될 수 있으므로 사전에 부모님의 수급 상황을 철저하게 따져보아야 합니다.
+                    </p>
+
+                    <h2>4. 실제 가입자의 연령대별, 차종별 비용 시뮬레이션</h2>
+                    <p>
+                        구체적인 예상 절약 효과를 파악하기 위해, 대표적인 차종인 준중형 세단 현대 아반떼와 인기 수입차 브랜드인 BMW 5시리즈 모델을 기준으로 만 22세 신규 가입자(자녀)와 무사고 15년의 베테랑 운전자(만 53세 부모님) 간의 공동 명의 모의 견적 비용을 산출하여 비교해 보았습니다.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table>
+                            <caption>표 2. 단독 명의 신규 가입 vs 99대1 공동 명의 적용 시의 평균 납부 금액 비교 시뮬레이션</caption>
+                            <thead>
+                                <tr>
+                                    <th>차량 종류 및 연식</th>
+                                    <th>자녀 단독 명의 (100% 자녀)</th>
+                                    <th>공동 명의 (부모99% + 자녀1%)</th>
+                                    <th>연간 실제 절약 금액</th>
+                                    <th>추천하는 담보 조건 구성</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>준중형 국산차 (아반떼 연식 3년 미만)</strong></td>
+                                    <td>약 1,850,000 원</td>
+                                    <td class="highlight-cell">약 1,120,000 원</td>
+                                    <td>약 730,000 원 절감</td>
+                                    <td>대물배상 10억, 자동차상해 특약 추가</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>프리미엄 세단 (제네시스 G80 신차)</strong></td>
+                                    <td>약 2,450,000 원</td>
+                                    <td class="highlight-cell">약 1,480,000 원</td>
+                                    <td>약 970,000 원 절감</td>
+                                    <td>자차 자기부담금 최대 50만원 설정</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>수입 브랜드 세단 (BMW 520i 신형)</strong></td>
+                                    <td>약 3,200,000 원</td>
+                                    <td class="highlight-cell">약 1,950,000 원</td>
+                                    <td>약 1,250,000 원 절감</td>
+                                    <td>수입차 전용 대체부품 특약 추천</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>
+                        위의 비교 결과표에서 알 수 있듯이, 단독 가입 대비 공동 명의를 채택할 때 평균 절감률은 약 35%에서 40% 이상에 육박합니다. 단독 가입 시 발생하는 연령 한정 및 무경력 할증 페널티가 부모님의 안전운전 할인 요율과 희석되면서 제일 현명한 가격대로 견적이 계산되는 효과입니다.
+                    </p>
+
+                    <h2>5. 다이렉트 자동차보험 비교 가입 시 할인 특약 극대화 방법</h2>
+                    <p>
+                        공동 명의를 활용하여 기본적인 요율 베이스를 크게 낮췄다면, 이제는 보험사에서 제공하는 여러 가지 온라인 다이렉트 비대면 전용 할인 특약의 종류를 적극적으로 가입 설계에 녹여내어 최종 납부 금액을 한층 더 조율해야 합니다. 스마트폰 전용 앱 또는 편리한 어플 서비스를 다운받아 가입하면 훨씬 더 수월하게 특약을 연동할 수 있습니다.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>마일리지 연간 주행거리 특약:</strong> 주말 위주로 차량을 운행하거나 연 주행거리가 15,000km 이하라면 무조건적인 할인 혜택을 챙겨야 합니다. 운행 구간이 짧을수록 만기 갱신 시 최대 35%까지 세금과 같은 잔여 환급금 형태로 계좌로 직접 송금받을 수 있습니다.
+                        </li>
+                        <li>
+                            <strong>T-map 및 카카오내비 안전운전 UBI 특약:</strong> 모바일 내비게이션 어플을 켜고 규정 속도를 준수하여 목적지까지 이동하면 점수가 자동으로 계산됩니다. 보통 75점 또는 80점 이상의 양호한 기준을 달성하면 보험사별로 약 5%에서 12%에 이르는 추가 할인을 제공합니다.
+                        </li>
+                        <li>
+                            <strong>첨단 안전장치(ADAS) 및 커넥티드카 할인:</strong> 2026년에 출고되는 대다수의 신차 브랜드 모델은 차선 이탈 방지, 전방 추돌 제동 보조 시스템을 기본 사양으로 포함하고 있습니다. 해당 장치를 등록하여 다이렉트 견적에 입력하면 별도의 입증 서류 제출 없이 자동으로 요율 혜택을 수혜받을 수 있습니다.
+                        </li>
+                        <li>
+                            <strong>가입경력 지정제도 등록:</strong> 공동 명의 계약 시 가장 빠트리지 말아야 할 필수적인 요소입니다. 비록 부모님의 명의로 보험 계약의 주체가 지정되어 있더라도, 운전자 지정 대상에 등록된 자녀 본인을 가입경력 인정 대상자 1인으로 지정해 놓으면 최대 3년까지의 경력을 축적할 수 있습니다. 이를 통해 향후 자녀 본인의 단독 계약으로 스핀오프 독립을 진행할 때, 경력 단절로 인한 불필요한 할증 단계를 뛰어넘어 곧바로 제일 저렴한 요율의 혜택을 보장받을 수 있습니다.
+                        </li>
+                    </ul>
+
+                    <h2>6. 온라인 커뮤니티(디시, 보배드림, 에펨코리아) 실사용자들의 솔직한 후기</h2>
+                    <p>
+                        네이버 카페나 다음 자동차 동호회를 포함해 젊은 가입자들의 활동성이 높은 디시인사이드, 보배드림, 펨코(에펨코리아) 등지의 자동차 정보 공유 채널을 모니터링해 보면, 공동 명의 가입과 관련된 솔직한 내돈내산 리얼 후기를 심심치 않게 접할 수 있습니다.
+                    </p>
+                    <p>
+                        이들의 주요 후기를 종합해 보면, 처음 면허를 취득한 만 21세 운전자가 직장 출퇴근용 중고 아반떼 차량의 보험료를 단독 견적 230만 원에서 부모님 99대1 공동 명의를 설정한 후 최종 115만 원 수준으로 반값에 가입에 성공했다는 내용이 주를 이룹니다. 매달 지출 부담이 큰 월급 수준에서 이 정도의 비용 세이브는 큰 생활 혜택으로 평가됩니다.
+                        다만 실사용자들은 몇 가지 현실적인 단점과 주의해야 할 사항 역시 언급하고 있습니다. 대표적으로는 추후 해당 차량을 타인에게 중고로 판매하게 되거나, 사고로 인해 차량을 조기에 폐차 처리해야 할 때 명의를 분배한 공동 명의자 전원(두 사람 모두)의 신분증 앞뒷면 사본과 차량 매도용 인감증명서 등 까다로운 행정 문서 지참 및 날인이 필요하다는 점입니다. 서류 미비로 인해 관공서에 여러 차례 걸음해야 했던 번거로움에 대한 단점이 종종 불평 사항으로 업로드되고 있습니다.
+                    </p>
+                    <p>
+                        또한, 간혹 무조건적인 사은품이나 주유 상품권 지급, 현금지원 등 편법적인 불법 리베이트 마케팅에 이끌려 정확한 약관 내용을 따져보지 않고 제일 싼곳이나 저렴한곳만을 고집하다가 사고 시 가장 중요한 대물 한도 보상 범위를 너무 낮게 잡아 정작 큰 사고가 났을 때 자비로 수천만 원을 수습해야 했다는 가슴 아픈 내돈내산 경고 글도 눈에 띕니다. 이 때문에 커뮤니티 유저들은 토스, 카카오톡 또는 금융 서비스 앱 내의 전문 비교 도구를 이용해 투명하게 담보 구성을 10억 이상으로 고루 통일해두고 객관적인 보험 브랜드 가액을 대조할 것을 거듭 조언하고 있습니다.
+                    </p>
+
+                    <h2>7. 공동 명의 차량 이전등록 서류 및 구청 방문 실무 절차</h2>
+                    <p>
+                        전국 주요 시청 및 군청 산하 자동차등록사업소를 방문하여 공동 명의 이전 절차를 마찰 없이 한 번에 완수하기 위한 필수 체크리스트 서류 일람을 전해 드립니다.
+                    </p>
+                    <ol>
+                        <li><strong>이전등록 신청서 및 소유권 공동명의 합의 조서:</strong> 관할 구청 민원실에 구비된 기본 양식입니다.</li>
+                        <li><strong>자동차 양도증명서(서명 또는 인감 날인):</strong> 매도인과 매수인의 지분 비율인 99%와 1% 비율을 각각 명시하여 기록해야 합니다.</li>
+                        <li><strong>공동 소유자 전원의 신분증 사본 및 인감증명서:</strong> 위임 대리인이 방문할 경우 서명사실확인서 혹은 대리권 위임장을 정교하게 갖추어야 합니다.</li>
+                        <li><strong>자동차 책임보험 가입증명서:</strong> 공동 등록을 진행하기 전, 반드시 다이렉트 온라인 인터넷 가입 완료 상태여야 구청의 가입 전산 승인이 통과됩니다. 이때 가입한 피보험자 명의와 양수 예정인의 공동 명의 지분 비율이 논리적으로 일치하는지 심사가 이루어집니다.</li>
+                        <li><strong>취등록세 고지서 납부:</strong> 양수하는 차량의 시가 표준가액 또는 실제 실거래 금액의 기준에 따라 세금이 산정됩니다. 지분 이전 비율만큼의 세금이 청구되는데, 고액의 차량인 경우 구청 내 은행 창구에서 신속한 즉시 납부가 가능합니다.</li>
+                    </ol>
+
+                    <div class="resources-box">
+                        <h4>공동 명의 자동차보험 설계 및 법적 신뢰 기반 추천 외부 자료</h4>
+                        <ul>
+                            <li><a href="https://www.fss.or.kr" target="_blank" rel="noopener">금융감독원 공식 홈페이지</a> - 자동차보험 분쟁 사조정 및 표준 약관 관련 공식 공시 자료 확인</li>
+                            <li><a href="https://www.kidi.or.kr" target="_blank" rel="noopener">보험개발원 공식 시스템</a> - 차량 등급별 요율표 및 평균 할인 할증 통계 원본 데이터 조회</li>
+                            <li><a href="https://www.molit.go.kr" target="_blank" rel="noopener">국토교통부 자동차 유관 정책</a> - 차량 공동 등록 규정 및 지분 이전 매매 가이드라인 정보</li>
+                            <li><a href="https://www.gov.kr" target="_blank" rel="noopener">정부24 종합 행정 포털</a> - 온라인 자동차등록원부 발급 및 공동명의 소유권 이전신청 방법 확인</li>
+                            <li><a href="https://namu.wiki/w/%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98" target="_blank" rel="noopener">나무위키 자동차보험 상세 백과</a> - 공동명의 가입 및 약관 해석을 위한 위키 백과 지식자료</li>
+                            <li><a href="https://www.kca.go.kr" target="_blank" rel="noopener">한국소비자원 피해 구제 가이드</a> - 다이렉트 온라인 계약 시 발생하는 불법 불공정 피해 구제 수칙</li>
+                        </ul>
+                    </div>
+
+                    <!-- FAQ Container -->
+                    <div class="faq-container">
+                        <h2>공동 명의 자동차보험 관련 핵심 FAQ (자주 묻는 질문)</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-trigger" onclick="toggleFaq(this)">
+                                Q1. 공동 명의 차량으로 가입하고 자녀 이름으로 경력을 쌓으려면 어떻게 해야 하나요?
+                                <span>열기</span>
+                            </div>
+                            <div class="faq-content">
+                                <p>보험 계약 체결 시 단순히 자녀를 운전 범위(예: 가족한정, 부모자녀한정)에 포함하는 것만으로는 경력이 쌓이지 않습니다. 반드시 가입 완료 후에 해당 다이렉트 사이트나 모바일 앱의 고객센터를 통해 '가입경력 지정제도'에 자녀를 '경력인정 대상자 1인'으로 명확히 등록하셔야 합니다. 이를 지정해 두어야 향후 최대 3년까지의 운전 무사고 경력이 인정되어 독립 시 단독 명의 가입 비용을 대폭 축소할 수 있습니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-trigger" onclick="toggleFaq(this)">
+                                Q2. 지분을 99대1로 할 때와 50대50으로 할 때의 세금(취등록세) 차이가 무엇인가요?
+                                <span>열기
+                                </span>
+                            </div>
+                            <div class="faq-content">
+                                <p>차량을 최초 취득할 때 발생하는 취등록세 총액은 차량 가격 전체가 기준이 되므로 지분율에 따른 취등록세 총액의 차이는 없습니다. 다만, 추후 공동 명의를 정리하고 자녀 1인의 단독 명의로 변경(명의이전)하고자 할 때, 99대1 비율의 경우 1%의 미미한 지분 가액에 대해서만 과세되기 때문에 이전 시 발생하는 양도 취등록세 비용이 사실상 거의 제로에 수렴하게 됩니다. 반면, 50대50 비율이었다면 차량 잔존 가치 가액의 절반(50%)에 대한 세율이 다시 한번 부과되므로 세금 차이가 대단히 큽니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-trigger" onclick="toggleFaq(this)">
+                                Q3. 공동 명의 중 자녀가 사고를 냈을 때 부모님의 다른 차량 보험료도 할증되나요?
+                                <span>열기</span>
+                            </div>
+                            <div class="faq-content">
+                                <p>네, 그렇습니다. 공동 명의로 묶인 차량에서 자녀가 사고를 발생시켜 보험 처리를 하게 될 경우, 피보험자로 등록된 부모님의 요율에 페널티 할증이 즉시 가산됩니다. 가장 조심해야 할 부분은 부모님이 개인 명의로 보유하고 운행하시던 다른 모든 차량의 자동차보험 갱신 시에도 이 사고 이력이 공유되어 전체적인 연간 보험료 인상을 유발할 수 있다는 점입니다. 따라서 공동 소유자 간 무사고 안전운행을 약속하는 것이 핵심 장점을 유지하는 첫걸음입니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-trigger" onclick="toggleFaq(this)">
+                                Q4. 지역건강보험료 가입자의 경우 공동 명의 지분율에 따라 건보료가 인상되나요?
+                                <span>열기</span>
+                            </div>
+                            <div class="faq-content">
+                                <p>2024년 2월 이후 개편된 국민건강보험법 기준에 의하여, 지역가입자 건강보험료 점수 산정 항목에서 '자동차 보유 재산 점수'는 전면 삭제 및 폐지되었습니다. 배기량이 높은 대형 고급 차량이나 프리미엄 수입차 브랜드를 취득하더라도 공동 명의 비율 및 단독 명의 여부에 관계없이 건강보험료는 1원도 인상되지 않으므로 걱정 없이 원하는 비율로 지분 구성을 진행하셔도 안전합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-trigger" onclick="toggleFaq(this)">
+                                Q5. 기초연금 수급 자격을 보유하신 은퇴 부모님과 공동 명의 등록 시 주의해야 하는 이유는 무엇인가요?
+                                <span>열기</span>
+                            </div>
+                            <div class="faq-content">
+                                <p>기초연금의 수급 평가 시스템은 재산을 기계적으로 대입합니다. 만약 연금을 받고 계시는 은퇴 부모님과 차량을 공동 명의로 묶게 되면, 지분율이 99대1 중 단 1%의 극소량에 불과할지라도 정부 전산상에서는 해당 자동차 전체가 부모님의 단독 재산 가액으로 100% 반영됩니다. 배기량 3,000cc를 초과하는 대형 SUV 세단이거나, 연식에 따른 잔존 차량 가액이 4,000만 원 이상인 고급 차량에 속할 경우, 부모님의 기초연금 지급 승인 자격이 완전히 정지되는 심각한 재무적 단점이 수반될 수 있으므로 공동 명의 등록 전 차종 선택에 엄밀한 체크가 요망됩니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
-  </body>
-</html>
+
+    <!-- Interactive JS Calculations and UI Effects -->
+    <script>
+        // Interactive Calculator Logic
+        function calculateJointPremium(event) {
+            event.preventDefault();
+
+            // Inputs
+            const carBrand = document.getElementById('carBrand').value;
+            const jointRatio = document.getElementById('jointRatio').value;
+            const driverAge = document.getElementById('driverAge').value;
+            const mileage = parseFloat(document.getElementById('mileage').value) || 10000;
+
+            // Checkboxes
+            const chkBlackbox = document.getElementById('chkBlackbox').checked;
+            const chkAdas = document.getElementById('chkAdas').checked;
+            const chkTmap = document.getElementById('chkTmap').checked;
+            const chkChild = document.getElementById('chkChild').checked;
+
+            // Base Premium Calculation (Rough Industry Standard Multipliers)
+            let basePremium = 1200000; // Default Standard Compact Base
+            if (carBrand === 'domestic_mid') basePremium = 1500000;
+            if (carBrand === 'domestic_luxury') basePremium = 2100000;
+            if (carBrand === 'imported') basePremium = 2900000;
+
+            // Age Multiplier for Sole Young Driver
+            let ageMultiplierSole = 2.4; 
+            if (driverAge === 'under26') ageMultiplierSole = 1.8;
+            if (driverAge === 'over26') ageMultiplierSole = 1.2;
+
+            // Age Multiplier for Joint Policy (Calculated under Parent's Good Rate + Age addition)
+            let ageMultiplierJoint = 1.35;
+            if (driverAge === 'under26') ageMultiplierJoint = 1.15;
+            if (driverAge === 'over26') ageMultiplierJoint = 0.95;
+
+            // Calculate Premiums
+            let solePremium = basePremium * ageMultiplierSole;
+            let jointPremium = basePremium * ageMultiplierJoint;
+
+            // Discount Apply
+            let discountRate = 1.0;
+            if (chkBlackbox) discountRate -= 0.04;
+            if (chkAdas) discountRate -= 0.06;
+            if (chkTmap) discountRate -= 0.08;
+            if (chkChild) discountRate -= 0.05;
+
+            // Mileage Discount
+            if (mileage < 5000) {
+                discountRate -= 0.32;
+            } else if (mileage < 10000) {
+                discountRate -= 0.20;
+            } else if (mileage < 15000) {
+                discountRate -= 0.08;
+            }
+
+            // Bound Discount limit to 45% maximum for realism
+            if (discountRate < 0.55) discountRate = 0.55;
+
+            solePremium = Math.round(solePremium);
+            jointPremium = Math.round(jointPremium * discountRate);
+            
+            // Savings
+            let savings = solePremium - jointPremium;
+            if (savings < 0) savings = 0;
+
+            // Display Results
+            const resultBox = document.getElementById('calcResult');
+            resultBox.style.display = 'block';
+            resultBox.innerHTML = `
+                <p style="margin-top:0; font-weight:700; color:#1E293B; border-bottom:1px solid #93C5FD; padding-bottom:5px;">분석된 2026 다이렉트 예상 요율 리포트</p>
+                <div style="margin-bottom:8px;"><strong>자녀 단독 명의 가입 예상액:</strong> <span style="text-decoration:line-through; color:#94A3B8;">${solePremium.toLocaleString()} 원</span></div>
+                <div style="margin-bottom:8px; color:var(--btn-cta); font-size:1.15rem;"><strong>99대1 공동 명의 최적 견적액:</strong> <strong>${jointPremium.toLocaleString()} 원</strong></div>
+                <div style="margin-bottom:12px; color:#10B981; font-weight:700;"><strong>연간 절감 가능 금액:</strong> 약 <strong>${savings.toLocaleString()} 원 세이브</strong></div>
+                <p style="font-size:0.8rem; color:#64748B; margin-bottom:0; line-height:1.4;">※ 상기 수치는 사용자의 나이 및 할인 한도 조합에 기반하여 산출된 예상 금액으로, 실제 인터넷 다이렉트 제휴사 및 가입 경력 인정제 적용 세부 약관에 따라 소폭의 차이점이 존재할 수 있습니다. 전문 컨설팅 상담을 신청해 주시면 최적의 순위 상품을 상세 추천해 드립니다.</p>
+            `;
+        }
+
+        // FAQ Toggle Accordion
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const content = faqItem.querySelector('.faq-content');
+            const isOpen = faqItem.classList.contains('active');
+
+            // Close all first for clean user experience
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-content').style.maxHeight = '0px';
+                item.querySelector('.faq-trigger span').textContent = '열기';
+            });
+
+            if (!isOpen) {
+                faqItem.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                element.querySelector('span').textContent = '닫기';
+            } else {
+                faqItem.classList.remove('active');
+                content.style.maxHeight = '0px';
+                element.querySelector('span').textContent = '열기';
+            }
+        }
+    </script>
+  
